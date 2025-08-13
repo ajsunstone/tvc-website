@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQs | True Value Capital</title>
+  <meta name="description" content="Frequently asked questions about True Value Capital's on-demand credit and lending products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .faq-wrap { padding: 120px 0 80px; }
+    .faq-list { display: grid; gap: 14px; }
+    details.faq-item { background: #fff; border: 1px solid rgba(21,58,102,0.08); border-radius: 12px; padding: 14px 16px; box-shadow: 0 8px 18px rgba(21,58,102,0.06); }
+    details.faq-item summary { cursor: pointer; font-weight: 700; color: var(--brand-700); outline: none; }
+    details.faq-item p { margin: 8px 0 0; color: var(--ink-700); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="brand">
+        <img src="./true-value-capital-logo.png" alt="True Value Capital logo" class="logo">
+        <div class="brand-text">
+          <span class="brand-name">TRUE VALUE</span>
+          <span class="brand-sub">CAPITAL</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="./index.html#how-it-works">How it works</a>
+        <a href="./index.html#benefits">Benefits</a>
+        <a href="./index.html#products">Products</a>
+        <a href="./faq.html">FAQ</a>
+        <a class="btn btn-primary" href="./index.html#" id="open-apply-nav">Apply now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="faq-wrap">
+      <div class="container">
+        <h1 class="headline" style="text-align:center; margin-bottom: 10px;">Frequently asked questions</h1>
+        <p class="subhead" style="text-align:center; max-width: 860px; margin: 0 auto 26px;">Answers to common questions about eligibility, interest calculation, security, and more.</p>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Who is eligible to apply?</summary>
+            <p>Individuals with valid PAN and verifiable monthly income are eligible to apply. Final approval depends on underwriting and KYC verification.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How is interest calculated?</summary>
+            <p>Interest is charged only on the amount you utilize and for the exact number of days until repayment. No usage, no interest.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What documents are required?</summary>
+            <p>Basic KYC documents including PAN, proof of identity and address, and income proof as per product type.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is my data secure?</summary>
+            <p>Yes. We use bank-grade encryption and follow regulatory guidelines and best practices to keep your information secure.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How quickly can I get funds?</summary>
+            <p>For on-demand credit, approved withdrawals are usually disbursed within minutes during banking hours.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="./true-value-capital-logo.png" alt="True Value Capital" class="logo small">
+        <span class="brand-name small">TRUE VALUE CAPITAL</span>
+      </div>
+      <p class="copyright">© <span id="year"></span> True Value Capital. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html> 

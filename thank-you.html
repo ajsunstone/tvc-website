@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Application received | True Value Capital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .thank-wrap { min-height: 100vh; display: grid; place-items: center; padding: 32px; }
+    .thank-card { width: min(720px, 100%); background: #fff; border-radius: 16px; border: 1px solid rgba(21,58,102,0.08); box-shadow: 0 20px 50px rgba(15,24,36,0.08); padding: 28px; text-align: center; }
+    .thank-card h1 { margin-top: 12px; color: var(--brand-700); }
+    .thank-card p { color: var(--ink-700); }
+    .pill { display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(28,197,183,0.12); color: var(--brand-600); font-weight: 600; }
+    .meta { color: var(--ink-500); font-size: 13px; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="thank-wrap">
+    <div class="thank-card">
+      <img src="./true-value-capital-logo.png" alt="True Value Capital" class="logo" style="margin:0 auto;">
+      <h1>Thanks for applying</h1>
+      <p>Our representative will get in touch with you shortly.</p>
+      <p class="meta" id="ack"></p>
+      <a class="btn btn-primary" href="./index.html" style="margin-top:14px; display:inline-block;">Back to home</a>
+    </div>
+  </div>
+  <script>
+    (function(){
+      try {
+        const data = JSON.parse(sessionStorage.getItem('tvc_application')||'null');
+        if (data && data.fullName && data.phone) {
+          const ack = document.getElementById('ack');
+          const maskedPhone = data.phone.replace(/\d(?=\d{4})/g, '•');
+          ack.textContent = `Application ID: TVC-${String(data.ts||Date.now()).slice(-8)} • ${data.fullName} • ${maskedPhone}`;
+        }
+      } catch(e) {}
+    })();
+  </script>
+</body>
+</html> 

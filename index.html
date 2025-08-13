@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>True Value Capital</title>
+  <meta name="description" content="Get up to 20x your monthly income as on-demand credit without any collateral. Pay interest only on the amount used.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="brand">
+        <img src="./true-value-capital-logo.png" alt="True Value Capital logo" class="logo">
+        <div class="brand-text">
+          <span class="brand-name">TRUE VALUE</span>
+          <span class="brand-sub">CAPITAL</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#how-it-works">How it works</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#products">Products</a>
+        <a href="faq.html">FAQ</a>
+        <button class="btn btn-primary" id="open-apply">Apply now</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="headline">Why pay interest on money you don't even use?</h1>
+          <p class="subhead">Get up to 20x your monthly income as on-demand credit without any collateral. Pay interest only on the amount used.</p>
+          <div class="hero-cta">
+            <button class="btn btn-primary btn-lg" id="open-apply-hero">Apply now</button>
+          </div>
+          <p class="disclaimer">Approval subject to eligibility and verification. PAN and mobile verification required.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+      <div class="container cols">
+        <div class="col">
+          <h3>On-demand credit</h3>
+          <p>Access a credit line when you need it. Withdraw instantly into your bank account and repay anytime.</p>
+        </div>
+        <div class="col">
+          <h3>Pay for what you use</h3>
+          <p>Interest applies only to the amount utilized and for the days used. No usage, no interest.</p>
+        </div>
+        <div class="col">
+          <h3>Secure & trustworthy</h3>
+          <p>Bank-grade encryption, strict KYC, and responsible lending practices to keep your data protected.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="section section-alt">
+      <div class="container cols">
+        <div class="col">
+          <h3>Up to 20x income</h3>
+          <p>Higher limits based on verified income—no collateral required.</p>
+        </div>
+        <div class="col">
+          <h3>Transparent pricing</h3>
+          <p>No hidden fees. Clear terms and an upfront view of interest.</p>
+        </div>
+        <div class="col">
+          <h3>Fast onboarding</h3>
+          <p>Apply in minutes. We keep the process simple and mobile-first.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="container">
+        <h2 class="section-title">Products</h2>
+        <div class="cols">
+          <div class="col">
+            <h3>Personal Loans</h3>
+            <p>Flexible unsecured loans tailored to your needs with quick approvals and transparent terms.</p>
+          </div>
+          <div class="col">
+            <h3>Home Loans</h3>
+            <p>Competitive rates and smooth processing to help you finance a new home or balance transfer.</p>
+          </div>
+          <div class="col">
+            <h3>Loans against Property</h3>
+            <p>Leverage your residential or commercial property while continuing to own and use it.</p>
+          </div>
+          <div class="col">
+            <h3>Loans against Shares</h3>
+            <p>Unlock liquidity against your investments without selling your portfolio.</p>
+          </div>
+          <div class="col">
+            <h3>Business Loans</h3>
+            <p>Working capital and growth financing designed for SMEs with minimal paperwork.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="./true-value-capital-logo.png" alt="True Value Capital" class="logo small">
+        <span class="brand-name small">TRUE VALUE CAPITAL</span>
+      </div>
+      <p class="copyright">© <span id="year"></span> True Value Capital. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="apply-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="apply-title">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="document">
+      <button class="modal-close" aria-label="Close" data-close>&times;</button>
+      <h2 id="apply-title" class="modal-title">Apply now</h2>
+      <p class="modal-sub">Please share your details and our representative will contact you shortly.</p>
+      <form id="apply-form" novalidate>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required>
+          <span class="error" data-for="fullName"></span>
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" inputmode="numeric" placeholder="10-digit mobile number" required>
+          <span class="error" data-for="phone"></span>
+        </div>
+        <div class="field">
+          <label for="pan">PAN</label>
+          <input id="pan" name="pan" type="text" placeholder="ABCDE1234F" maxlength="10" required>
+          <span class="error" data-for="pan"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg full">Submit application</button>
+        <p class="privacy-note">By submitting, you agree to our processing of your information for application review.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html> 
